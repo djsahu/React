@@ -1,0 +1,137 @@
+
+.contain-rows{
+    padding: 0;
+    margin: 0;
+    margin: 10px;
+    width: 98%;
+}
+
+.bg-image{
+   background-image: url('https://media.istockphoto.com/photos/black-grunge-texture-place-over-any-object-create-black-dirty-grunge-picture-id685391850');
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; 
+
+}
+
+.contain-all{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.966);
+    width: 100%;
+    align-self: center;
+    padding: 0;
+    overflow: hidden;
+    /* height: 100%; */
+}
+
+.chat-message{
+  align-self: left;
+}
+
+.room-form{
+     align-self: center;
+     float: left;
+}
+
+
+.send-message{
+    /* padding: 1%; */
+    width: auto;
+    align-self: center;
+}
+
+.contain-all{
+    width: auto;
+    /* position: relative; */
+}
+
+.search{
+    width : 100%;
+    height: 40px;
+    border-radius : 10px; 
+    border-color: rgb(103, 103, 235);
+}
+
+.user{
+    font-size: 14px;
+    font-style: oblique;
+}
+
+.room-list{
+  padding: 2%;
+  border-right: 1px solid black;
+  margin-top: 0;
+}
+
+.room-content{
+  width:100%;
+  padding:2%;
+  margin: auto;
+  height: 375px;;
+  border-radius: 10;
+  background-color:whitesmoke;
+  overflow-y: scroll;
+}
+
+.search-bar {
+    height: 20px;
+    margin-bottom: 20px; 
+    width: 100%;
+}
+
+.chat-view{
+  overflow-y: scroll;
+  margin-bottom: 1%;
+  background-image: url('https://www.sammobile.com/wp-content/uploads/2018/07/wallpaper_006.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid black;
+  height: 425px;
+}
+
+/* Message styling */
+.talk-bubble {
+	margin: 25px;
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  height: auto;
+  float:right;
+  background-color: antiquewhite;
+}
+.border{
+  border: 8px solid #666;
+}
+.round{
+  border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+
+}
+.tri-right.right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+  right: -20px;
+  top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color:  antiquewhite transparent transparent  antiquewhite;
+}
+.talktext{
+    padding: 1em;
+    text-align: left;
+    line-height: 1.5em;
+  }
+  .talktext p{
+    /* remove webkit p margins */
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+  }
+

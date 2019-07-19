@@ -1,0 +1,9 @@
+.box{
+    text-align: center;
+    display: inline-block;
+    width: 33%;
+}
+
+.img{
+    width: 25%;
+}

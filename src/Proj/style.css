@@ -1,0 +1,22 @@
+.cover {
+    width: 100%;
+    top:0px;
+    height: 100%;
+    text-align: center;
+    background: url('https://source.unsplash.com/random');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    margin: 0;
+}
+
+.container{
+    top:0px;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    background-color: white;
+    border-radius: 2.5%;
+}
+
+

@@ -1,0 +1,10 @@
+.button{
+    background-color: bisque;
+}
+
+.box{
+    width: 40%;
+    background-color: bisque;
+    display: inline-block;
+    margin: 10px;
+}
