@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import Icon from '@material-ui/core/Icon';
 import Grid from '@material-ui/core/Grid'
 
-class Try extends React.Component{
+class Chat extends React.Component{
     render(){
         return(
             <div className='contain-all'>
@@ -103,4 +103,4 @@ class Try extends React.Component{
 
 }
 
-export default Try;
+export default Chat;

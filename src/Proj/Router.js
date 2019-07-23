@@ -6,9 +6,9 @@ import {
     Route
 } from "react-router-dom";
 
-import SignIn from "../Proj/signin";
-import SignUp from "../Proj/signup";
-import Chat from './chatting';
+import SignIn from "./Proj/signin";
+import SignUp from "./Proj/signup";
+import Chat from './Proj/chatting';
 
 class Router extends React.Component{
     render(){
