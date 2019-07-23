@@ -1,229 +1,106 @@
 import React from 'react';
-import './chat_style.css';
+import {Container,Row, Col} from 'react-bootstrap';
+import './trystyle.css';
+import Button from '@material-ui/core/Button';
+import Divider from '@material-ui/core/Divider';
+
+
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import Icon from '@material-ui/core/Icon';
+import Grid from '@material-ui/core/Grid'
 
 class Chat extends React.Component{
     render(){
-    return(
-      <div>
-      <div class="container clearfix">
-      <div class="people-list" id="people-list">
-        <div class="search">
-          <input type="text" placeholder="search" />
-          <i class="fa fa-search"></i>
-        </div>
-        <ul class="list">
-          <li class="clearfix">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg" alt="avatar" />
-            <div class="about">
-              <div class="name">Vincent Porter</div>
-              <div class="status">
-                <i class="fa fa-circle online"></i> online
-              </div>
+        return(
+            <div className='contain-all'>
+                <AppBar style={{height:40, borderRadius: '1px'}} position="static">
+                    <Toolbar>
+                    <Typography style={{marginBottom:20}} variant="h6" noWrap>
+                        Chat Room
+                    </Typography>
+                    </Toolbar>
+                </AppBar>
+                <Container fluid className='contain-rows'>
+                <div class="bg-image"></div>
+                <Row>
+                    <Col className='search-bar' sm={3} lg={3}>
+                    <form>
+                    <input className='search' type="text" name="search" placeholder=' Search...'/>
+                    </form>
+                    </Col>
+                    <Col style={{ fontSize: 18, textAlign:"center", marginBottom: '20px', paddingTop: '10px'}} sm={9} lg={9}><b>User-Room</b></Col>
+                </Row>
+                <Row>
+                    <Col style={{height:425}} className='room-list' sm={3} lg={3}>
+                        <div className='room-content'>
+                        <div>1 of 1</div>
+                        <div>1 of 2</div>
+                        <div>1 of 3</div>
+                        </div>
+                    </Col>
+                <Col className='chat-view' sm={8}lg={9} >
+                    <div className='sender'>
+                    <div class="talk-bubble tri-right round right-in">
+                        <div class="talktext">
+                            <p className='user'><b>Aindil</b></p>
+                            <p>Moving our way back up the right side indented. Uses .round and .right-in</p>
+                            <p style={{fontSize: 12, float:'right', right: 5, marginBottom: 5}}>10:00pm</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class='reciever'>
+                    <div class="talk-bubble tri-right round right-in">
+                        <div class="talktext">
+                            <p className='user'><b>Devraj</b></p>
+                            <p>This talk-bubble uses .left-in class to show a triangle on the left slightly indented. Still a blocky square.</p>
+                            <p style={{fontSize: 12, float:'right', right: 5, marginBottom: 5}}>10:05pm</p>
+                        </div>
+                        </div>
+                    </div>
+                    <div className='sender'>
+                    <div class="talk-bubble tri-right round right-in">
+                        <div class="talktext">
+                            <p className='user'><b>Aindil</b></p>
+                            <p>Moving our way back up the right side indented. Uses .round and .right-in</p>
+                            <p style={{fontSize: 12, float:'right', right: 5, marginBottom: 5}}>10:00pm</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class='reciever'>
+                    <div class="talk-bubble tri-right round right-in">
+                        <div class="talktext">
+                            <p className='user'><b>Devraj</b></p>
+                            <p>This talk-bubble uses .left-in class to show a triangle on the left slightly indented. Still a blocky square.</p>
+                            <p style={{fontSize: 12, float:'right', right: 5, marginBottom: 5}}>10:05pm</p>
+                        </div>
+                        </div>
+                    </div>
+                </Col>
+                </Row>
+                <Row>
+                    <Col className='room-form' sm={3} lg={3}>
+                        <Button style={{width: '100%', height: 50}} variant="outlined" color="primary">
+                            CreateRoom +
+                        </Button>
+                    </Col>
+                    <Col xs={8} sm={8} className='chat-message'>
+                        <div>
+                            <textarea style={{width: '100%', borderRadius: 20, borderColor: 'rgb(103, 103, 235)'}} name="message-to-send" id="message-to-send" placeholder ="   Type your message...." rows="2"></textarea>
+                        </div> 
+                    </Col>
+                    <Col class='send-message' xs={2} sm={1}><Button style={{marginTop: 8}} type='submit' value='Send' color="primary" variant="contained" >
+                        Send
+                    </Button>
+                    </Col>
+                </Row>
+                </Container>
             </div>
-          </li>
-          
-          <li class="clearfix">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_02.jpg" alt="avatar" />
-            <div class="about">
-              <div class="name">Aiden Chavez</div>
-              <div class="status">
-                <i class="fa fa-circle offline"></i> left 7 mins ago
-              </div>
-            </div>
-          </li>
-          
-          <li class="clearfix">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_03.jpg" alt="avatar" />
-            <div class="about">
-              <div class="name">Mike Thomas</div>
-              <div class="status">
-                <i class="fa fa-circle online"></i> online
-              </div>
-            </div>
-          </li>
-          
-          <li class="clearfix">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_04.jpg" alt="avatar" />
-            <div class="about">
-              <div class="name">Erica Hughes</div>
-              <div class="status">
-                <i class="fa fa-circle online"></i> online
-              </div>
-            </div>
-          </li>
-          
-          <li class="clearfix">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_05.jpg" alt="avatar" />
-            <div class="about">
-              <div class="name">Ginger Johnston</div>
-              <div class="status">
-                <i class="fa fa-circle online"></i> online
-              </div>
-            </div>
-          </li>
-          
-          <li class="clearfix">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_06.jpg" alt="avatar" />
-            <div class="about">
-              <div class="name">Tracy Carpenter</div>
-              <div class="status">
-                <i class="fa fa-circle offline"></i> left 30 mins ago
-              </div>
-            </div>
-          </li>
-          
-          <li class="clearfix">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_07.jpg" alt="avatar" />
-            <div class="about">
-              <div class="name">Christian Kelly</div>
-              <div class="status">
-                <i class="fa fa-circle offline"></i> left 10 hours ago
-              </div>
-            </div>
-          </li>
-          
-          <li class="clearfix">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_08.jpg" alt="avatar" />
-            <div class="about">
-              <div class="name">Monica Ward</div>
-              <div class="status">
-                <i class="fa fa-circle online"></i> online
-              </div>
-            </div>
-          </li>
-          
-          <li class="clearfix">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_09.jpg" alt="avatar" />
-            <div class="about">
-              <div class="name">Dean Henry</div>
-              <div class="status">
-                <i class="fa fa-circle offline"></i> offline since Oct 28
-              </div>
-            </div>
-          </li>
-          
-          <li class="clearfix">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_10.jpg" alt="avatar" />
-            <div class="about">
-              <div class="name">Peyton Mckinney</div>
-              <div class="status">
-                <i class="fa fa-circle online"></i> online
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="chat">
-        <div class="chat-header clearfix">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg" alt="avatar" />
-          
-          <div class="chat-about">
-            <div class="chat-with">Chat with Vincent Porter</div>
-            <div class="chat-num-messages">already 1 902 messages</div>
-          </div>
-          <i class="fa fa-star"></i>
-        </div>
-        
-        <div class="chat-history">
-          <ul>
-            <li class="clearfix">
-              <div class="message-data align-right">
-                <span class="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
-                <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
-                
-              </div>
-              <div class="message other-message float-right">
-                Hi Vincent, how are you? How is the project coming along?
-              </div>
-            </li>
-            
-            <li>
-              <div class="message-data">
-                <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-                <span class="message-data-time">10:12 AM, Today</span>
-              </div>
-              <div class="message my-message">
-                Are we meeting today? Project has been already finished and I have results to show you.
-              </div>
-            </li>
-            
-            <li class="clearfix">
-              <div class="message-data align-right">
-                <span class="message-data-time" >10:14 AM, Today</span> &nbsp; &nbsp;
-                <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
-                
-              </div>
-              <div class="message other-message float-right">
-                Well I am not sure. The rest of the team is not here yet. Maybe in an hour or so? Have you faced any problems at the last phase of the project?
-              </div>
-            </li>
-            
-            <li>
-              <div class="message-data">
-                <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-                <span class="message-data-time">10:20 AM, Today</span>
-              </div>
-              <div class="message my-message">
-                Actually everything was fine. I'm very excited to show this to our team.
-              </div>
-            </li>
-            
-            <li>
-              <div class="message-data">
-                <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-                <span class="message-data-time">10:31 AM, Today</span>
-              </div>
-              <i class="fa fa-circle online"></i>
-              <i class="fa fa-circle online" style="color: #AED2A6"></i>
-              <i class="fa fa-circle online" style="color:#DAE9DA"></i>
-            </li>
-            
-          </ul>
-          
-        </div>
-        
-        <div class="chat-message clearfix">
-          <textarea name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
-                  
-          <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
-          <i class="fa fa-file-image-o"></i>
-          
-          <button>Send</button>
-  
-        </div>
-        
-      </div>
-      
-    </div>
-  <div>
-  <script id="message-template" type="text/x-handlebars-template">
-    <li class="clearfix">
-      <div class="message-data align-right">
-        <span class="message-data-time" >{}, Today</span> &nbsp; &nbsp;
-        <span class="message-data-name" >Olia</span> <i class="fa fa-circle me"></i>
-      </div>
-      <div class="message other-message float-right">
-        {}
-      </div>
-    </li>
-  </script>
-  
-  <script id="message-response-template" type="text/x-handlebars-template">
-    <li>
-      <div class="message-data">
-        <span class="message-data-name"><i class="fa fa-circle online"></i> Vincent</span>
-        <span class="message-data-time">{}, Today</span>
-      </div>
-      <div class="message my-message">
-        {}
-      </div>
-    </li>
-  </script>  
-  </div>
-  </div>
         );
     }
-  }
+
+}
 
 export default Chat;
