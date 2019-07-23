@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 //import MyComp from './class1/mycomp';
 // import Class8 from "./class8/class8";
 import Router from "./Proj/Router";
-// import Try from './Proj/try';
+// import Chat from './Proj/chatting';
 
 
 ReactDOM.render(<Router />, document.getElementById('root'));

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container,Row, Col} from 'react-bootstrap';
-import './trystyle.css';
+import './chatstyle.css';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 
