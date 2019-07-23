@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Icon } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import Card from "@material-ui/core/Card";
@@ -32,7 +32,7 @@ function MadeWithLove() {
   );
 }
 
-const useStyles = makeStyles(theme => ({
+const mystyle = theme => ({
   '@global': {
     body: {
       backgroundColor: theme.palette.common.white,
@@ -61,16 +61,20 @@ const useStyles = makeStyles(theme => ({
     borderRadius: 20,
     alignSelf: "center"
   }
-}));
+});
 
-export default function SignUp() {
-  const classes = useStyles();
+class SignUp extends React.Component {
+  // componentDidMount(){
+  //   const classes = useStyles();
+  // }
+  render(){
+    const {classes} = this.props;
 
   return (
     <div className='cover'>
     <Grid container justify="center">
       {/* <CssBaseline /> */}
-      <Grid item xs={4} lg={4}>
+      <Grid item xs={12} sm={4}>
       <Card className={classes.mycard}>
 
       {/* <div className={classes.paper}> */}
@@ -167,3 +171,6 @@ export default function SignUp() {
     </div>
   );
 }
+}
+
+export default withStyles(mystyle)(SignUp);

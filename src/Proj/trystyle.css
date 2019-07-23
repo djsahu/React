@@ -6,17 +6,6 @@
     width: 98%;
 }
 
-.bg-image{
-   background-image: url('https://media.istockphoto.com/photos/black-grunge-texture-place-over-any-object-create-black-dirty-grunge-picture-id685391850');
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%; 
-
-}
-
 .contain-all{
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.966);
@@ -24,7 +13,11 @@
     align-self: center;
     padding: 0;
     overflow: hidden;
-    /* height: 100%; */
+    background-image: url('http://www.psddots.com/wp-content/uploads/2013/07/Pink-Blue-Blured-Texture-618x380.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 .chat-message{
@@ -78,7 +71,6 @@
 
 .search-bar {
     height: 20px;
-    margin-bottom: 20px; 
     width: 100%;
 }
 
@@ -100,7 +92,7 @@
   position: relative;
   width: 80%;
   height: auto;
-  float:right;
+  float: right;
   background-color: antiquewhite;
 }
 .border{
